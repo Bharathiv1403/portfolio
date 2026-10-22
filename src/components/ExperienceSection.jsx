@@ -335,6 +335,44 @@ export default function ExperienceSection() {
           flex-wrap: wrap;
           gap: 0.45rem;
         }
+
+        @media (max-width: 768px) {
+          .exp-card {
+            padding: 1.35rem 1.15rem;
+          }
+          .exp-role {
+            font-size: 1.15rem;
+          }
+          .company-badge-row {
+            gap: 0.75rem;
+          }
+          .company-icon-box {
+            width: 38px;
+            height: 38px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .timeline-item {
+            display: block;
+          }
+          .timeline-marker {
+            display: none;
+          }
+          .exp-card {
+            padding: 1.15rem 0.85rem;
+          }
+          .exp-card-header {
+            gap: 0.5rem;
+          }
+          .exp-summary {
+            margin-top: 0.85rem;
+            padding-top: 0.85rem;
+          }
+          .exp-tags-row {
+            gap: 0.4rem;
+          }
+        }
       `}</style>
     </section>
   );

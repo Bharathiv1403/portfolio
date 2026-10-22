@@ -159,6 +159,12 @@ export default function CommunitySection() {
           background: rgba(17, 24, 39, 0.6);
         }
 
+        @media (max-width: 600px) {
+          .foss-card {
+            padding: 1.25rem 1rem;
+          }
+        }
+
         .foss-card-header {
           display: flex;
           align-items: center;
@@ -223,11 +229,28 @@ export default function CommunitySection() {
           gap: 0.65rem;
         }
 
+        @media (max-width: 600px) {
+          .edu-card {
+            padding: 1.25rem 1rem;
+          }
+        }
+
         .edu-header {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
           gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+          .edu-header {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+          }
+          .edu-brand-row {
+            gap: 0.75rem;
+          }
         }
 
         .edu-brand-row {

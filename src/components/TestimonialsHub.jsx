@@ -417,6 +417,30 @@ export default function TestimonialsHub() {
           gap: 1.5rem;
         }
 
+        @media (max-width: 768px) {
+          .feedback-control-bar {
+            padding: 1.25rem 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+          }
+          .control-actions {
+            width: 100%;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+          }
+          .mini-filter-pills {
+            width: 100%;
+            overflow-x: auto;
+            justify-content: flex-start;
+          }
+          .add-feedback-btn {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+
         .rating-score-block {
           display: flex;
           align-items: center;
@@ -703,6 +727,20 @@ export default function TestimonialsHub() {
           flex-direction: column;
           gap: 1.25rem;
           background: rgba(17, 24, 39, 0.7);
+        }
+
+        @media (max-width: 650px) {
+          .testimonial-card {
+            padding: 1.25rem 1rem;
+          }
+          .t-author-footer {
+            flex-wrap: wrap;
+          }
+          .t-date {
+            position: static;
+            width: 100%;
+            margin-top: 0.25rem;
+          }
         }
 
         .testimonial-card:hover {

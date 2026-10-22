@@ -328,6 +328,16 @@ export default function ProjectsSection() {
           margin-bottom: 3.25rem;
         }
 
+        @media (max-width: 768px) {
+          .project-tabs-container {
+            justify-content: flex-start;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+          }
+        }
+
         .project-tabs {
           display: flex;
           align-items: center;
@@ -339,6 +349,17 @@ export default function ProjectsSection() {
           backdrop-filter: blur(14px);
           overflow-x: auto;
           max-width: 100%;
+        }
+
+        @media (max-width: 600px) {
+          .project-tabs {
+            padding: 0.3rem;
+            gap: 0.35rem;
+          }
+          .tab-btn {
+            padding: 0.45rem 0.85rem;
+            font-size: 0.78rem;
+          }
         }
 
         .tab-btn {
@@ -393,6 +414,13 @@ export default function ProjectsSection() {
           transition: all var(--trans-base);
         }
 
+        @media (max-width: 768px) {
+          .project-card {
+            padding: 1.35rem 1.15rem;
+            gap: 1rem;
+          }
+        }
+
         .project-card:hover {
           transform: translateY(-6px);
           border-color: rgba(56, 189, 248, 0.4);
@@ -403,6 +431,14 @@ export default function ProjectsSection() {
           display: flex;
           align-items: center;
           justify-content: space-between;
+        }
+
+        @media (max-width: 500px) {
+          .card-top-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.65rem;
+          }
         }
 
         .project-icon-and-badge {
@@ -764,6 +800,18 @@ export default function ProjectsSection() {
           padding-top: 1rem;
           border-top: 1px solid var(--border-subtle);
           gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+          .project-card-footer {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.85rem;
+          }
+          .view-details-btn {
+            width: 100%;
+            justify-content: center;
+          }
         }
 
         .card-tags-list {

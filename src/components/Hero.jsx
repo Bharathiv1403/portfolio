@@ -20,6 +20,7 @@ import { personalInfo } from '../data/portfolioData';
 import InteractiveTerminal from './InteractiveTerminal';
 
 export default function Hero() {
+  const [imgError, setImgError] = useState(false);
   const roles = [
     'Frontend Team Lead & Architect',
     'React & Next.js Specialist',
@@ -167,12 +168,24 @@ export default function Hero() {
 
             <div className="avatar-glass-card">
               <div className="image-frame">
-                <img
-                  src={personalInfo.profileImage}
-                  alt={personalInfo.name}
-                  className="profile-img"
-                  loading="eager"
-                />
+                {!imgError ? (
+                  <img
+                    src={personalInfo.profileImage}
+                    alt={personalInfo.name}
+                    className="profile-img"
+                    loading="eager"
+                    decoding="async"
+                    onError={() => setImgError(true)}
+                  />
+                ) : (
+                  <div className="profile-fallback">
+                    <div className="fallback-avatar-ring">
+                      <span className="fallback-initials">BV</span>
+                    </div>
+                    <span className="fallback-name">{personalInfo.name}</span>
+                    <span className="fallback-role">{personalInfo.role}</span>
+                  </div>
+                )}
                 <div className="image-overlay-gradient" />
                 <div className="hologram-scanline" />
               </div>
@@ -233,6 +246,13 @@ export default function Hero() {
           position: relative;
         }
 
+        @media (max-width: 768px) {
+          .hero-section {
+            padding-top: 5.5rem;
+            padding-bottom: 2.5rem;
+          }
+        }
+
         .hero-container {
           display: grid;
           grid-template-columns: 1.15fr 0.85fr;
@@ -244,7 +264,7 @@ export default function Hero() {
           .hero-container {
             grid-template-columns: 1fr;
             text-align: center;
-            gap: 3rem;
+            gap: 2.5rem;
           }
         }
 
@@ -319,6 +339,13 @@ export default function Hero() {
           }
         }
 
+        @media (max-width: 480px) {
+          .hero-title {
+            font-size: 1.95rem;
+            line-height: 1.18;
+          }
+        }
+
         .dynamic-role-box {
           font-size: 1.55rem;
           font-weight: 700;
@@ -377,6 +404,17 @@ export default function Hero() {
           margin-top: 0.5rem;
         }
 
+        @media (max-width: 576px) {
+          .hero-cta-group {
+            width: 100%;
+            flex-direction: column;
+            gap: 0.75rem;
+          }
+          .hero-cta-group .btn {
+            width: 100%;
+          }
+        }
+
         .cta-glow-btn {
           box-shadow: 0 4px 20px rgba(56, 189, 248, 0.45);
         }
@@ -388,6 +426,13 @@ export default function Hero() {
           flex-wrap: wrap;
           padding-top: 0.85rem;
           border-top: 1px solid var(--border-subtle);
+        }
+
+        @media (max-width: 768px) {
+          .hero-meta-strip {
+            justify-content: center;
+            gap: 1rem;
+          }
         }
 
         .meta-item {
@@ -442,12 +487,19 @@ export default function Hero() {
           display: flex;
           justify-content: center;
           position: relative;
+          width: 100%;
         }
 
         .visual-card-wrapper {
           position: relative;
           width: 100%;
           max-width: 420px;
+        }
+
+        @media (max-width: 480px) {
+          .visual-card-wrapper {
+            max-width: 320px;
+          }
         }
 
         .aura-glow {
@@ -474,6 +526,14 @@ export default function Hero() {
           background: #6366f1;
         }
 
+        @media (max-width: 768px) {
+          .aura-cyan, .aura-indigo {
+            width: 180px;
+            height: 180px;
+            filter: blur(40px);
+          }
+        }
+
         .avatar-glass-card {
           position: relative;
           background: rgba(17, 24, 39, 0.7);
@@ -485,6 +545,13 @@ export default function Hero() {
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.2);
         }
 
+        @media (max-width: 480px) {
+          .avatar-glass-card {
+            padding: 0.85rem;
+            border-radius: var(--radius-lg);
+          }
+        }
+
         .image-frame {
           position: relative;
           width: 100%;
@@ -492,6 +559,60 @@ export default function Hero() {
           border-radius: var(--radius-lg);
           overflow: hidden;
           border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        @media (max-width: 640px) {
+          .image-frame {
+            height: 340px;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .image-frame {
+            height: 290px;
+          }
+        }
+
+        .profile-fallback {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(145deg, #0f172a 0%, #030712 100%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.65rem;
+          padding: 1.5rem;
+          text-align: center;
+        }
+
+        .fallback-avatar-ring {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #0ea5e9, #6366f1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+        }
+
+        .fallback-initials {
+          font-size: 2rem;
+          font-weight: 800;
+          color: #ffffff;
+        }
+
+        .fallback-name {
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .fallback-role {
+          font-size: 0.82rem;
+          color: var(--accent-cyan);
+          font-weight: 500;
         }
 
         .profile-img {
@@ -551,10 +672,42 @@ export default function Hero() {
           right: 1.5rem;
         }
 
-        @media (max-width: 576px) {
-          .badge-top-right { right: 0; top: 0.5rem; }
-          .badge-bottom-left { left: 0; bottom: 1.5rem; }
-          .badge-bottom-right { display: none; }
+        @media (max-width: 992px) {
+          .badge-top-right {
+            right: 0.75rem;
+            top: 0.75rem;
+          }
+          .badge-bottom-left {
+            left: 0.75rem;
+            bottom: 0.75rem;
+          }
+          .badge-bottom-right {
+            display: none;
+          }
+          .floating-badge {
+            padding: 0.45rem 0.75rem;
+            gap: 0.45rem;
+          }
+          .badge-title {
+            font-size: 0.75rem;
+          }
+          .badge-sub {
+            font-size: 0.65rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .experience-corner-pill {
+            top: 0.75rem;
+            left: 0.75rem;
+            padding: 0.25rem 0.65rem;
+          }
+          .exp-num {
+            font-size: 0.85rem;
+          }
+          .exp-text {
+            font-size: 0.65rem;
+          }
         }
 
         .badge-title {

@@ -335,6 +335,27 @@ echo "✓ Optimized .aab generated with Android manifest hardening."`
 
         @media (max-width: 600px) {
           .hide-mobile { display: none; }
+          .terminal-header {
+            padding: 0.65rem 0.85rem;
+            gap: 0.5rem;
+          }
+          .window-dots {
+            display: none;
+          }
+          .terminal-tabs {
+            width: 100%;
+          }
+          .terminal-actions {
+            width: 100%;
+            justify-content: flex-end;
+          }
+          .terminal-code-body {
+            padding: 0.85rem 1rem;
+            font-size: 0.78rem;
+          }
+          .code-pre {
+            font-size: 0.76rem;
+          }
         }
       `}</style>
     </div>

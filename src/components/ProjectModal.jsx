@@ -131,6 +131,14 @@ export default function ProjectModal({ project, onClose }) {
           animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        @media (max-width: 640px) {
+          .modal-container {
+            padding: 1.25rem 1rem;
+            max-height: 94vh;
+            border-radius: var(--radius-lg);
+          }
+        }
+
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -298,6 +306,16 @@ export default function ProjectModal({ project, onClose }) {
           gap: 1rem;
           padding-top: 1.25rem;
           border-top: 1px solid var(--border-subtle);
+        }
+
+        @media (max-width: 640px) {
+          .modal-footer {
+            flex-direction: column-reverse;
+            gap: 0.75rem;
+          }
+          .modal-footer .btn {
+            width: 100%;
+          }
         }
       `}</style>
     </div>

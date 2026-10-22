@@ -134,6 +134,12 @@ export default function AboutSection() {
           transition: all var(--trans-base);
         }
 
+        @media (max-width: 600px) {
+          .pillar-card {
+            padding: 1.35rem 1.15rem;
+          }
+        }
+
         .interactive-hover:hover {
           transform: translateY(-6px) scale(1.01);
           border-color: rgba(56, 189, 248, 0.4);
@@ -184,6 +190,19 @@ export default function AboutSection() {
           .about-highlight-box {
             grid-template-columns: 1fr;
             padding: 2rem;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .about-highlight-box {
+            padding: 1.25rem 1rem;
+            gap: 1.5rem;
+          }
+          .highlight-headline {
+            font-size: 1.15rem;
+          }
+          .highlight-quick-list {
+            padding: 1rem 0.85rem;
           }
         }
 

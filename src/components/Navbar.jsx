@@ -276,12 +276,15 @@ export default function Navbar() {
           right: 0;
           background: rgba(11, 15, 25, 0.97);
           backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
           border-bottom: 1px solid var(--border-subtle);
           padding: 1.5rem;
           display: flex;
           flex-direction: column;
-          gap: 1.5rem;
+          gap: 1.25rem;
           box-shadow: var(--shadow-lg);
+          max-height: calc(100vh - 75px);
+          overflow-y: auto;
         }
 
         .mobile-links {

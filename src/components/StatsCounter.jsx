@@ -51,6 +51,13 @@ export default function StatsCounter() {
         @media (max-width: 576px) {
           .stats-grid {
             grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+          .stat-card {
+            padding: 1.25rem 1rem;
+          }
+          .stat-value {
+            font-size: 2.1rem;
           }
         }
 

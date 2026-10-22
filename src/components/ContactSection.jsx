@@ -335,6 +335,20 @@ export default function ContactSection() {
           transition: all var(--trans-base);
         }
 
+        @media (max-width: 600px) {
+          .contact-card {
+            padding: 1.15rem 1rem;
+            gap: 0.85rem;
+          }
+          .contact-card-icon {
+            width: 42px;
+            height: 42px;
+          }
+          .card-value {
+            font-size: 0.92rem;
+          }
+        }
+
         .interactive-glow:hover {
           border-color: rgba(56, 189, 248, 0.35);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.2);
@@ -427,6 +441,16 @@ export default function ContactSection() {
           border-color: rgba(56, 189, 248, 0.25);
         }
 
+        @media (max-width: 600px) {
+          .resume-action-card {
+            padding: 1.25rem 1rem;
+          }
+          .resume-download-btn {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+
         .resume-card-title {
           font-size: 1.15rem;
           font-weight: 700;
@@ -451,7 +475,7 @@ export default function ContactSection() {
 
         @media (max-width: 600px) {
           .contact-form-wrapper {
-            padding: 1.75rem;
+            padding: 1.25rem 1rem;
           }
         }
 
