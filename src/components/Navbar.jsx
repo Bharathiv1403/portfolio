@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, Send, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { Menu, X, Download, Send, ArrowUpRight, ShieldCheck, Sparkles, Github } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar() {
@@ -72,6 +72,18 @@ export default function Navbar() {
         {/* Desktop Quick Actions */}
         <div className="nav-actions desktop-only">
           <a
+            href={personalInfo.socials.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-secondary nav-btn nav-gh-btn"
+            title="GitHub @Bharathiv1403"
+            aria-label="GitHub Profile"
+          >
+            <Github size={15} />
+            <span>GitHub</span>
+          </a>
+
+          <a
             href={personalInfo.resumeUrl}
             download="Bharathi-V-Resume.pdf"
             className="btn btn-secondary nav-btn"
@@ -114,6 +126,17 @@ export default function Navbar() {
           </div>
 
           <div className="mobile-actions">
+            <a
+              href={personalInfo.socials.github}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-secondary w-full"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Github size={16} />
+              <span>GitHub (@Bharathiv1403)</span>
+            </a>
+
             <a
               href={personalInfo.resumeUrl}
               download="Bharathi-V-Resume.pdf"

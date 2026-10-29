@@ -10,6 +10,8 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { education, certifications, fossContributions } from '../data/portfolioData';
+import TamilTtsDemo from './TamilTtsDemo';
+import GitHubActivity from './GitHubActivity';
 
 export default function CommunitySection() {
   return (
@@ -48,6 +50,12 @@ export default function CommunitySection() {
               </div>
             ))}
           </div>
+
+          {/* Interactive Tamil TTS Hackathon Simulator */}
+          <TamilTtsDemo />
+
+          {/* Live GitHub Profile & Repositories Showcase */}
+          <GitHubActivity />
         </div>
 
         {/* Education & Certifications 2-Column Section */}

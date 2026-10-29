@@ -11,7 +11,7 @@ export const personalInfo = {
   resumeUrl: "/assets/docs/Bharathi-V.pdf",
   profileImage: "/assets/images/profile.jpg",
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/Bharathiv1403",
     linkedin: "https://www.linkedin.com/in/bharathiv-developer",
     email: "mailto:bharathivragav206@gmail.com",
     phone: "tel:+919363524498"
@@ -66,7 +66,8 @@ export const projectCategories = [
   { id: "mobile-mail", label: "Mobile & Mail (JMAP)" },
   { id: "enterprise-saas", label: "Enterprise SaaS" },
   { id: "auth-security", label: "Security & Auth" },
-  { id: "fullstack", label: "Full Stack & Web" }
+  { id: "fullstack", label: "Full Stack & Web" },
+  { id: "open-source", label: "Open Source (GitHub)" }
 ];
 
 export const projects = [
@@ -181,7 +182,105 @@ export const projects = [
       "Naama Ooru: Built a hyper-local commerce and service-booking web platform featuring a React frontend, scalable Python FastAPI microservice, and relational MySQL database.",
       "Engineered secure authentication, booking workflows, catalog filtering, and transactional API endpoints."
     ],
+    demoUrl: "https://adspectra.in",
+    githubUrl: "https://github.com/Bharathiv1403",
     featured: true
+  },
+  {
+    id: "student-management-app",
+    title: "Student Management & Academic Analytics Suite",
+    category: "open-source",
+    badge: "GitHub Featured",
+    period: "Open Source",
+    tagline: "TypeScript academic administration suite with student tracking, course enrollment, and performance analytics.",
+    stack: ["TypeScript", "React", "Tailwind CSS", "REST APIs"],
+    tools: ["Vite", "ESLint", "Git", "GitHub"],
+    overview:
+      "A modular TypeScript and React application engineered for educational institutions to streamline student registration, monitor attendance, calculate GPAs, and visualize academic performance metrics.",
+    highlights: [
+      "Role-based dashboard views tailored for administrators, educators, and students with strict type-checked models.",
+      "Reusable data table architecture with instant debounced search, multi-column sorting, and record filtering.",
+      "Clean TypeScript interfaces and scalable state workflows maintained as an open-source repository on GitHub."
+    ],
+    githubUrl: "https://github.com/Bharathiv1403/student-management-app",
+    featured: true
+  },
+  {
+    id: "tamil-tts-tacotron2",
+    title: "Tamil Speech Synthesis (TTS) - Tacotron 2",
+    category: "open-source",
+    badge: "FOSS Hackathon Winner",
+    period: "VGLUG Hackathon",
+    tagline: "PyTorch deep neural network architecture adapting Tacotron 2 for Tamil phoneme acoustic modeling and speech generation.",
+    stack: ["Python", "PyTorch", "Tacotron 2", "Audio DSP", "Jupyter"],
+    tools: ["CUDA", "Linux", "NumPy", "GitHub"],
+    overview:
+      "A deep learning speech synthesis research project built during the VGLUG FOSS Hackathon to generate natural-sounding Tamil speech directly from text input.",
+    highlights: [
+      "Trained custom Tacotron 2 acoustic sequence-to-sequence model for Tamil character-to-mel-spectrogram conversion.",
+      "Constructed audio synthesis pipelines, phoneme mapping, and spectrogram post-processing modules.",
+      "Exhibited live demonstrations at VGLUG Open Source gatherings and published open source on GitHub."
+    ],
+    githubUrl: "https://github.com/Bharathiv1403/Tamil-TTS-Using-tacotron2",
+    featured: true
+  },
+  {
+    id: "react-projects-suite",
+    title: "React Production Architecture & Patterns Suite",
+    category: "open-source",
+    badge: "Frontend Library",
+    period: "Open Source",
+    tagline: "Curated collection of scalable React & TypeScript components, custom state hooks, and dashboard widgets.",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    tools: ["Git", "GitHub", "Storybook", "ESLint"],
+    overview:
+      "Production-grade developer library containing reusable enterprise UI architectures, custom hooks, and state management patterns.",
+    highlights: [
+      "Custom hook suite covering virtualized scrolling, debounced search, local storage synchronization, and window observers.",
+      "Accessible UI patterns designed with full keyboard navigation and reactive dark/cyberpunk color tokens."
+    ],
+    githubUrl: "https://github.com/Bharathiv1403/react_projects",
+    featured: false
+  },
+  {
+    id: "personal-application",
+    title: "AAYON — Executive Personal Life OS Mobile App",
+    category: "mobile-mail",
+    badge: "AI Life OS • Expo 54",
+    period: "Production Mobile",
+    tagline: "Executive-tier offline-first Personal Life OS built with React Native 0.81, Expo SDK 54, Google Gemini AI, hardware pedometer, and Tamil Nadu Vatti wealth engine.",
+    stack: ["React Native (0.81)", "Expo SDK 54", "TypeScript", "Google Gemini AI", "Zustand", "Expo Sensors & Biometrics"],
+    tools: ["Android Keystore", "Expo SecureStore", "AsyncStorage", "GitHub Actions APK", "EAS Cloud Build", "Git"],
+    overview:
+      "AAYON is a private, executive-tier offline-first mobile operating system designed to unify daily life productivity: from automated remote job discovery with 99% ATS scoring and Google Gemini AI cover letter/interview generation to hardware pedometer health tracking, Tamil Nadu flat interest (Vatti) debt calculators, gold net-worth metrics, and encrypted biometric vaults.",
+    highlights: [
+      "Dynamic Executive Dashboard (Today View): Real-time daily briefing, weather telemetry, task streaks, quick action triggers, step count progress, and financial snapshot in a glanceable native UI.",
+      "CareerPilot Engine & Automated ATS: Pre-loaded 140+ remote roles with live job board scrapers (Arbeitnow & Jobicy), PDF resume parsing (expo-document-picker), 99% ATS keyword matching against target frontend stacks, and 1-click official applications.",
+      "Google Gemini AI Suite & Voice: Powers AI-tailored 3-paragraph executive cover letters, adaptive technical & HR interview coaching (React 19 Fiber, RSC, Zustand, Hermes), and text-to-speech voice feedback via expo-speech.",
+      "Health & Vitality Tracker: Hardware-accelerated pedometer using expo-sensors for live step counts, active Kcal burn calculations, distance tracking (km), 1-tap hydration monitoring, and 7-day rolling consistency charts.",
+      "Smart Wealth & Tamil Nadu Vatti Engine: Monthly flat interest debt calculator (e.g., 2 rooba vatti), principal part-repayment recalibration engine, physical Gold portfolio tracker (Grams & Savaran), Trip Splitwise manager, and monthly grocery provisions checklist.",
+      "Hardware Security Vault: Biometric authentication (Fingerprint & FaceID via expo-local-authentication), 4-digit PIN stored in encrypted Android Keystore via expo-secure-store, 100% on-device AsyncStorage, and portable encrypted JSON backup."
+    ],
+    githubUrl: "https://github.com/Bharathiv1403/personal_application",
+    featured: true
+  },
+  {
+    id: "vglug-community-portal",
+    title: "VGLUG Community Portal & FOSS Archive",
+    category: "open-source",
+    badge: "10★ FOSS",
+    period: "FOSS Community",
+    tagline: "Official web portal and learning repository for the Villupuram GNU/Linux Users Group community.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    tools: ["Linux", "Git", "GitHub Pages"],
+    overview:
+      "Open source web platform serving the Villupuram GNU/Linux Users Group (VGLUG) to educate students in Linux, Python, and open technologies.",
+    highlights: [
+      "Showcases technical workshop archives, Linux installation guides, and community meeting schedules.",
+      "Earned 10 stars and active recognition across the Tamil Nadu FOSS ecosystem."
+    ],
+    githubUrl: "https://github.com/Bharathiv1403/VGLUG-",
+    featured: false
   }
 ];
 

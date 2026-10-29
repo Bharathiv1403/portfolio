@@ -141,6 +141,17 @@ export default function Hero() {
               <Linkedin size={16} className="meta-icon cyan" />
               <span>LinkedIn</span>
             </a>
+
+            <a
+              href={personalInfo.socials.github}
+              target="_blank"
+              rel="noreferrer"
+              className="meta-item linkable github-badge-pill"
+              title="View GitHub Profile (@Bharathiv1403)"
+            >
+              <Github size={16} className="meta-icon violet" />
+              <span>GitHub</span>
+            </a>
           </div>
 
           {/* Technology Highlights Ribbon */}
@@ -451,6 +462,7 @@ export default function Hero() {
         .meta-icon.cyan { color: var(--accent-cyan); }
         .meta-icon.indigo { color: var(--accent-indigo); }
         .meta-icon.emerald { color: var(--accent-emerald); }
+        .meta-icon.violet { color: #a78bfa; }
 
         .hero-tech-ribbon {
           display: flex;

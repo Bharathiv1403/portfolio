@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Layers, Wrench, Shield, CheckCircle2, Cpu, ExternalLink, Terminal } from 'lucide-react';
+import { X, Layers, Wrench, Shield, CheckCircle2, Cpu, ExternalLink, Terminal, Github } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -97,6 +97,34 @@ export default function ProjectModal({ project, onClose }) {
           <button className="btn btn-secondary" onClick={onClose}>
             <span>Close Details</span>
           </button>
+
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary modal-gh-btn"
+              title="View Source on GitHub"
+            >
+              <Github size={16} />
+              <span>GitHub Repo</span>
+              <ExternalLink size={13} />
+            </a>
+          )}
+
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary modal-demo-btn"
+              title="View Live Platform"
+            >
+              <ExternalLink size={16} />
+              <span>Live Site</span>
+            </a>
+          )}
+
           <a href="#contact" className="btn btn-primary" onClick={onClose}>
             <span>Discuss this Project</span>
           </a>
@@ -306,6 +334,30 @@ export default function ProjectModal({ project, onClose }) {
           gap: 1rem;
           padding-top: 1.25rem;
           border-top: 1px solid var(--border-subtle);
+        }
+
+        .modal-gh-btn {
+          border-color: rgba(168, 85, 247, 0.4);
+          color: #d8b4fe;
+          background: rgba(168, 85, 247, 0.08);
+        }
+
+        .modal-gh-btn:hover {
+          background: rgba(168, 85, 247, 0.2);
+          border-color: #a855f7;
+          color: #ffffff;
+        }
+
+        .modal-demo-btn {
+          border-color: rgba(56, 189, 248, 0.4);
+          color: #7dd3fc;
+          background: rgba(56, 189, 248, 0.08);
+        }
+
+        .modal-demo-btn:hover {
+          background: rgba(56, 189, 248, 0.2);
+          border-color: #38bdf8;
+          color: #ffffff;
         }
 
         @media (max-width: 640px) {

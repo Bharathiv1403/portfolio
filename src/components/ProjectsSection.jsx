@@ -18,7 +18,11 @@ import {
   Activity,
   Zap,
   Lock,
-  Server
+  Server,
+  Github,
+  BookOpen,
+  Volume2,
+  Code2
 } from 'lucide-react';
 import { projects, projectCategories } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
@@ -45,6 +49,16 @@ export default function ProjectsSection() {
         return <Receipt size={24} className="emerald" />;
       case 'adspectra-naama-ooru':
         return <Store size={24} className="rose" />;
+      case 'student-management-app':
+        return <BookOpen size={24} className="indigo" />;
+      case 'tamil-tts-tacotron2':
+        return <Volume2 size={24} className="cyan" />;
+      case 'react-projects-suite':
+        return <Code2 size={24} className="emerald" />;
+      case 'personal-application':
+        return <Sparkles size={24} className="violet" />;
+      case 'vglug-community-portal':
+        return <Globe size={24} className="amber" />;
       default:
         return <Cpu size={24} className="cyan" />;
     }
@@ -179,6 +193,118 @@ export default function ProjectsSection() {
           </div>
         );
 
+      case 'student-management-app':
+        return (
+          <div className="project-mockup-banner admin-mockup">
+            <div className="mockup-header">
+              <div className="mockup-dots">
+                <span className="m-dot red" /><span className="m-dot yellow" /><span className="m-dot green" />
+              </div>
+              <span className="mockup-title-bar">Student Admin • TypeScript Suite</span>
+              <span className="mockup-badge-unread indigo">● Open Source</span>
+            </div>
+            <div className="mockup-dns-grid">
+              <div className="dns-pill passed">
+                <span className="dns-type">Core:</span>
+                <span className="dns-status">TypeScript Strict ✓</span>
+              </div>
+              <div className="dns-pill passed">
+                <span className="dns-type">Modules:</span>
+                <span className="dns-status">GPA & Attendance ✓</span>
+              </div>
+              <div className="dns-pill passed">
+                <span className="dns-type">State:</span>
+                <span className="dns-status">Modular React ✓</span>
+              </div>
+              <div className="dns-pill passed">
+                <span className="dns-type">Repo:</span>
+                <span className="dns-status">GitHub Public ✓</span>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'tamil-tts-tacotron2':
+        return (
+          <div className="project-mockup-banner mail-mockup">
+            <div className="mockup-header">
+              <div className="mockup-dots">
+                <span className="m-dot red" /><span className="m-dot yellow" /><span className="m-dot green" />
+              </div>
+              <span className="mockup-title-bar">Tamil TTS • Tacotron 2 PyTorch</span>
+              <span className="mockup-badge-unread amber">★ FOSS Winner</span>
+            </div>
+            <div className="mockup-inner-mail">
+              <div className="mock-mail-item">
+                <div className="mail-avatar-box">TTS</div>
+                <div className="mail-meta">
+                  <div className="mail-sender-row">
+                    <span className="mail-sender">VGLUG FOSS Hackathon</span>
+                    <span className="mail-time">PyTorch CUDA</span>
+                  </div>
+                  <span className="mail-subject">Acoustic Model • Phoneme-to-Spectrogram Synthesis</span>
+                  <div className="mail-tags">
+                    <span className="m-tag cyan">#PyTorch</span>
+                    <span className="m-tag emerald">#Tacotron2</span>
+                    <span className="m-tag amber">#TamilVoice</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'vglug-community-portal':
+        return (
+          <div className="project-mockup-banner default-mockup">
+            <div className="mockup-header">
+              <div className="mockup-dots">
+                <span className="m-dot red" /><span className="m-dot yellow" /><span className="m-dot green" />
+              </div>
+              <span className="mockup-title-bar">VGLUG Community Portal</span>
+              <span className="mockup-badge-unread amber">★ 10 Stars</span>
+            </div>
+            <div className="default-mockup-body">
+              <div className="duo-platform-row">
+                <span className="platform-tag">Linux Education & FOSS</span>
+                <span className="platform-tag">Villupuram GNU/Linux Users Group</span>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'personal-application':
+        return (
+          <div className="project-mockup-banner mail-mockup">
+            <div className="mockup-header">
+              <div className="mockup-dots">
+                <span className="m-dot red" /><span className="m-dot yellow" /><span className="m-dot green" />
+              </div>
+              <span className="mockup-title-bar">AAYON Life OS • React Native & Gemini AI</span>
+              <span className="mockup-badge-unread emerald">● 99% ATS Match</span>
+            </div>
+            <div className="mockup-inner-mail">
+              <div className="mock-mail-item">
+                <div className="mail-avatar-box">OS</div>
+                <div className="mail-meta">
+                  <div className="mail-sender-row">
+                    <span className="mail-sender">CareerPilot • Health Pedometer • Vatti Engine</span>
+                    <span className="mail-time">Expo SDK 54</span>
+                  </div>
+                  <span className="mail-subject">Gemini AI Cover Letters • Hardware Biometrics • 100% Local</span>
+                  <div className="mail-tags">
+                    <span className="m-tag cyan">#Dashboard</span>
+                    <span className="m-tag emerald">#CareerPilot</span>
+                    <span className="m-tag amber">#HealthOS</span>
+                    <span className="m-tag indigo">#WealthVatti</span>
+                    <span className="m-tag rose">#GeminiAI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
       default:
         return (
           <div className="project-mockup-banner default-mockup">
@@ -290,16 +416,32 @@ export default function ProjectsSection() {
                   )}
                 </div>
 
-                <button
-                  className="view-details-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelectedProject(project);
-                  }}
-                >
-                  <span>Architecture</span>
-                  <ArrowRight size={15} />
-                </button>
+                <div className="card-actions-row">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-gh-btn"
+                      title="View GitHub Repository"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github size={14} />
+                      <span>Code</span>
+                    </a>
+                  )}
+
+                  <button
+                    className="view-details-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
+                  >
+                    <span>Architecture</span>
+                    <ArrowRight size={15} />
+                  </button>
+                </div>
               </div>
 
               {/* Ambient Glow */}
@@ -823,6 +965,34 @@ export default function ProjectsSection() {
         .more-chip {
           background: rgba(255, 255, 255, 0.08);
           font-weight: 600;
+        }
+
+        .card-actions-row {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          flex-shrink: 0;
+        }
+
+        .card-gh-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: #d8b4fe;
+          padding: 0.4rem 0.75rem;
+          border-radius: var(--radius-full);
+          background: rgba(168, 85, 247, 0.1);
+          border: 1px solid rgba(168, 85, 247, 0.3);
+          transition: all var(--trans-fast);
+        }
+
+        .card-gh-btn:hover {
+          background: rgba(168, 85, 247, 0.25);
+          border-color: #c084fc;
+          color: #ffffff;
+          transform: translateY(-2px);
         }
 
         .view-details-btn {
